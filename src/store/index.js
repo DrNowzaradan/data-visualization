@@ -24,7 +24,7 @@ export default createStore({
       state.selectedCityData = data;
   },
   async GetCities(state){
-    await axios.get("http://localhost:9000/api/getallcities").then((data)=>{
+    await axios.get("http://localhost:9000/api/getonecity").then((data)=>{
         state.cities=data
     })
   },

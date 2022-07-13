@@ -4,21 +4,19 @@
     @mousemove="UpdatePos($event)"
   >
     <div id="tooltip" :style="{ top: posY + 'px', left: posX + 'px' }"></div>
-    <svg version="1.1" id="svg-turkiye-haritasi" viewBox="0 0 1007.478 527.323">
-      <g id="turkiye">
-        <g
-          v-for="(city, name, index) in GetCities.data"
-          :key="index"
-          :id="city.sehir_isim"
-        >
-          <path
-            :style="{ fill: city.renk_isim }"
-            :d="city.sehir_path"
-            @mouseover="TooltipText(city.sehir_isim)"
-            @mouseleave="TooltipClose()"
-            @click="OpenDetailCard(city)"
-          ></path>
-        </g>
+    <svg version="1.1" id="svg-turkiye-haritasi" viewBox="0 0 2500 2500">
+      <g
+        v-for="(city, name, index) in GetCities.data"
+        :key="index"
+        :id="city.ilce_isim"
+      >
+        <path
+          :style="{ fill: city.renk_isim }"
+          :d="city.ilce_path"
+          @mouseover="TooltipText(city.ilce_isim)"
+          @mouseleave="TooltipClose()"
+          @click="OpenDetailCard(city)"
+        ></path>
       </g>
     </svg>
   </div>
