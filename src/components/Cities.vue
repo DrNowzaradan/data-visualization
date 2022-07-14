@@ -11,7 +11,7 @@
         :id="city.ilce_isim"
       >
         <path
-          :style="{ fill: city.renk_isim }"
+          style="fill: tomato"
           :d="city.ilce_path"
           @mouseover="TooltipText(city.ilce_isim)"
           @mouseleave="TooltipClose()"
